@@ -17,6 +17,9 @@ int main() {
         cout << "7) Eliminar" << endl;
         cout << "8) Ordenar" << endl;
         cout << "9) Buscar" << endl;
+        cout << "10) Ordenar Tipo" << endl;
+        cout << "11) Ordenar Salud" << endl;
+        cout << "12) Ordenar Fuerza" << endl;
         cout << "0) Salir" << endl;
         getline(cin, op);
 
@@ -89,6 +92,15 @@ int main() {
             else {
                 cout << *ptr << endl;
             }
+        }
+        else if (op == "10") {
+            v.ordenarTipo();
+        }
+        else if (op == "11") {
+            v.ordenarSalud();
+        }
+        else if (op == "12") {
+            v.ordenarFuerza();
         }
         else if (op == "0") {
             break;

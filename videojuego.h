@@ -20,7 +20,10 @@ public:
     size_t size();
     void inicializar(const Personaje &p, size_t n);
     void eliminar(size_t pos);
-    void ordenar();
+    void ordenar(); 
+    void ordenarTipo();
+    void ordenarFuerza();
+    void ordenarSalud();
     Personaje* buscar(const Personaje &p);
 
     friend Videojuego& operator<<(Videojuego &v, const Personaje &p)

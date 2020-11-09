@@ -122,6 +122,21 @@ void Videojuego::ordenar()
 {
     sort(personajes.begin(), personajes.end());
 }
+void Videojuego::ordenarTipo()
+{
+    sort(personajes.begin(), personajes.end(), 
+    [](Personaje p1, Personaje p2){return p1.getTipo() < p2.getTipo();});
+}
+void Videojuego::ordenarSalud()
+{
+    sort(personajes.begin(), personajes.end(),
+    [](Personaje p1, Personaje p2){return p1.getSalud() > p2.getSalud();});
+}
+void Videojuego::ordenarFuerza()
+{
+    sort(personajes.begin(), personajes.end(),
+    [](Personaje p1, Personaje p2){return p1.getFuerza() < p2.getFuerza();});
+}
 
 Personaje* Videojuego::buscar(const Personaje &p)
 {
